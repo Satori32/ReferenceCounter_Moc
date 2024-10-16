@@ -1,4 +1,4 @@
-#include <stdio.h>
+/** /
 #include <stdlib.h>
 #include <stdint.h>
 
@@ -42,7 +42,8 @@ bool Free(ReferenceCounter& In) {
 	In.P = NULL;
 	return true;
 }
-
+/**/
+#include "ReferenceCounter.h"
 int main() {
 	ReferenceCounter R =ConstructReferenceCounter();
 	Inc(R);

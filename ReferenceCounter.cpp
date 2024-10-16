@@ -7,6 +7,14 @@ ReferenceCounter ConstructReferenceCounter() {
 	return R;
 }
 
+/** /
+ReferenceCounter MakeCopy(ReferenceCounter& In) {//need free. you are lost controle.
+	ReferenceCounter X = In;
+	Inc(In);
+
+	return X;
+}
+/**/
 bool Inc(ReferenceCounter& In) {
 	if (In.P == NULL) { return false; }
 	(*In.P)++;
